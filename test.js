@@ -1,4 +1,4 @@
-/* istanbul instrument in package jslint-lite */
+/* istanbul instrument in package mysql-lite */
 /*jslint
     bitwise: true,
     browser: true,
@@ -21,30 +21,12 @@
         Error.stackTraceLimit = 20;
         // init local
         local = {};
+        local = {};
         // init modeJs
-        local.modeJs = (function () {
-            try {
-                return typeof navigator.userAgent === 'string' &&
-                    typeof document.querySelector('body') === 'object' &&
-                    typeof XMLHttpRequest.prototype.open === 'function' &&
-                    'browser';
-            } catch (errorCaughtBrowser) {
-                return module.exports &&
-                    typeof process.versions.node === 'string' &&
-                    typeof require('http').createServer === 'function' &&
-                    'node';
-            }
-        }());
+        local.modeJs = 'node';
         // init global
-        local.global = local.modeJs === 'browser'
-            ? window
-            : global;
+        local.global = global;
         switch (local.modeJs) {
-        // re-init local from window.local
-        case 'browser':
-            local = local.global.utility2_rollup || local.global.local;
-            local.global.utility2.objectSetDefault(local, local.global.utility2);
-            break;
         // re-init local from example.js
         case 'node':
             local = global.local = (local.global.utility2_rollup || require('utility2'))
@@ -69,24 +51,6 @@
                 'test.js',
                 local.env.npm_package_main + '.js'
             ];
-            options.moduleDict = {
-                'db-lite.Connection.prototype': {
-                    exampleFileList: [],
-                    exports: local.Connection.prototype
-                },
-                'db-lite.Pool.prototype': {
-                    exampleFileList: [],
-                    exports: local.Pool.prototype
-                },
-                'db-lite.PoolCluster.prototype': {
-                    exampleFileList: [],
-                    exports: local.PoolCluster.prototype
-                },
-                'db-lite.Query.prototype': {
-                    exampleFileList: [],
-                    exports: local.Query.prototype
-                }
-            };
             local.buildDoc(options, onError);
         };
         break;

@@ -1,6 +1,6 @@
 mysql-lite
 ==========
-this is the zero-dependency version of mysql v2.12.0
+this package is the zero-dependency version of the mysql v2.12.0 npm-package
 
 [![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-mysql-lite.svg)](https://travis-ci.org/kaizhu256/node-mysql-lite)
 
@@ -21,8 +21,9 @@ this is the zero-dependency version of mysql v2.12.0
 - add extra tests
 - none
 
-#### change since 9fe8c225
-- npm publish 2016.11.1
+#### change since 7e73913f
+- npm publish 2016.11.2
+- update documentation
 - none
 
 #### this package requires
@@ -64,6 +65,11 @@ this is the zero-dependency version of mysql v2.12.0
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
+    "keywords": [
+        "db",
+        "mariadb", "mysql",
+        "sql"
+    ],
     "license": "MIT",
     "main": "lib.mysql",
     "name": "mysql-lite",
@@ -86,7 +92,7 @@ export npm_config_mode_auto_restart=1 && \
 utility2 shRun shIstanbulCover test.js",
         "test": "export PORT=$(utility2 shServerPortRandom) && utility2 test test.js"
     },
-    "version": "2016.11.1"
+    "version": "2016.11.2"
 }
 ```
 
