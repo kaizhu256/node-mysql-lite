@@ -157,17 +157,6 @@
         
         <li>
             
-            <a class="docApiElementLiA" href="#element.mysql-lite.middleware">
-            function <span class="docApiSignatureSpan">mysql-lite.</span>middleware
-            <span class="docApiSignatureSpan">(request,
- response,
- nextMiddleware)</span>
-            </a>
-            
-        </li>
-        
-        <li>
-            
             <span class="docApiSignatureSpan">object <span class="docApiSignatureSpan">mysql-lite.</span>testRunBeforeDone</span>
         
         </li>
@@ -896,42 +885,6 @@ If you prefer to have another type of query escape format, there&#x27;s a connec
 a custom format function. You can access the connection object if you want to use the built-in &#x60;.escape()&#x60; or any othe\
 r connection function.
 ...</pre></li>
-        </ul>
-        
-        
-        
-        <h2>
-            <a href="#element.mysql-lite.middleware" id="element.mysql-lite.middleware">
-            function <span class="docApiSignatureSpan">mysql-lite.</span>middleware
-            <span class="docApiSignatureSpan">(request,
- response,
- nextMiddleware)</span>
-            </a>
-        </h2>
-        <ul>
-        <li>description and source code<pre class="docApiCodePre">middleware = function (request,
- response,
- nextMiddleware) {
-    var options;
-    options = {};
-    local.onNext(options, function (error) {
-        // recurse with next middleware in middlewareList
-        if (options.modeNext &lt; self.middlewareList.length) {
-            // run the sub-middleware
-            self.middlewareList[options.modeNext](
-                request,
-                response,
-                options.onNext
-            );
-            return;
-        }
-        // default to nextMiddleware
-        nextMiddleware(error);
-    });
-    options.modeNext = -1;
-    options.onNext();
-}</pre></li>
-        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
         </ul>
         
         
