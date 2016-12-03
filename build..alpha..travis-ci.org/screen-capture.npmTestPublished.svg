@@ -1,16 +1,16 @@
-<svg height="1534" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="1534" fill="#555" width="720"></rect>
+<svg height="1550" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="1550" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26"></tspan>
-<tspan x="10" y="42">[MODE_BUILD=npmTestPublished] - 2016-12-03T11:08:50Z - npm-testing published-package mysql-lite</tspan>
+<tspan x="10" y="42">[MODE_BUILD=npmTestPublished] - 2016-12-03T11:28:59Z - npm-testing published-package mysql-lite</tspan>
 <tspan x="10" y="58"></tspan>
 <tspan x="10" y="74"></tspan>
-<tspan x="10" y="90">&gt; mysql-lite@2016.11.1 postinstall /tmp/app/node_modules/mysql-lite</tspan>
+<tspan x="10" y="90">&gt; mysql-lite@2016.11.2 postinstall /tmp/app/node_modules/mysql-lite</tspan>
 <tspan x="10" y="106">&gt; for DIR in .bin electron-lite utility2; do     (if [ -d node_modules/$DIR ] &amp;&amp; [ ! -d $DIR ]; \</tspan>
 <tspan x="10" y="122">then mv node_modules/$DIR .; fi); done; rm -fr node_modules &amp;&amp; ln -s . node_modules</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154">/tmp/app</tspan>
-<tspan x="10" y="170">└── mysql-lite@2016.11.1 </tspan>
+<tspan x="10" y="170">└── mysql-lite@2016.11.2 </tspan>
 <tspan x="10" y="186"></tspan>
 <tspan x="10" y="202">npm WARN enoent ENOENT: no such file or directory, open '/tmp/app/package.json'</tspan>
 <tspan x="10" y="218">npm WARN app No description</tspan>
@@ -23,46 +23,46 @@
 <tspan x="10" y="330">&gt; ./index.sh shNpmPostinstall</tspan>
 <tspan x="10" y="346"></tspan>
 <tspan x="10" y="362"></tspan>
-<tspan x="10" y="378">&gt; mysql-lite@2016.11.1 postinstall /tmp/app/node_modules/mysql-lite</tspan>
+<tspan x="10" y="378">&gt; mysql-lite@2016.11.2 postinstall /tmp/app/node_modules/mysql-lite</tspan>
 <tspan x="10" y="394">&gt; for DIR in .bin electron-lite utility2; do     (if [ -d node_modules/$DIR ] &amp;&amp; [ ! -d $DIR ]; \</tspan>
 <tspan x="10" y="410">then mv node_modules/$DIR .; fi); done; rm -fr node_modules &amp;&amp; ln -s . node_modules</tspan>
 <tspan x="10" y="426"></tspan>
-<tspan x="10" y="442">mysql-lite@2016.11.1 /tmp/app/node_modules/mysql-lite</tspan>
+<tspan x="10" y="442">mysql-lite@2016.11.2 /tmp/app/node_modules/mysql-lite</tspan>
 <tspan x="10" y="458">├── electron-lite@2016.10.1  (git://github.com/kaizhu256/node-electron-lite.git#1a030198852d35e0\</tspan>
 <tspan x="10" y="474">ff8caa8c37c93c17c633b404)</tspan>
 <tspan x="10" y="490">└── utility2@2016.11.3  (git://github.com/kaizhu256/node-utility2.git#6c28c33a90bfef929f08af80b2\</tspan>
 <tspan x="10" y="506">a9004427647ba4)</tspan>
 <tspan x="10" y="522"></tspan>
 <tspan x="10" y="538"></tspan>
-<tspan x="10" y="554">&gt; mysql-lite@2016.11.1 test /tmp/app/node_modules/mysql-lite</tspan>
+<tspan x="10" y="554">&gt; mysql-lite@2016.11.2 test /tmp/app/node_modules/mysql-lite</tspan>
 <tspan x="10" y="570">&gt; export PORT=$(utility2 shServerPortRandom) &amp;&amp; utility2 test test.js</tspan>
 <tspan x="10" y="586"></tspan>
 <tspan x="10" y="602"></tspan>
-<tspan x="10" y="618">[MODE_BUILD=npmTestPublished] - 2016-12-03T11:08:54Z - npm-testing /tmp/app/node_modules/mysql-l\</tspan>
+<tspan x="10" y="618">[MODE_BUILD=npmTestPublished] - 2016-12-03T11:29:05Z - npm-testing /tmp/app/node_modules/mysql-l\</tspan>
 <tspan x="10" y="634">ite</tspan>
 <tspan x="10" y="650"></tspan>
 <tspan x="10" y="666"></tspan>
 <tspan x="10" y="682">covering $ /home/travis/.nvm/versions/node/v7.2.0/bin/node /tmp/app/node_modules/mysql-lite/test\</tspan>
 <tspan x="10" y="698">.js</tspan>
-<tspan x="10" y="714">&gt; server listening on http-port 43460</tspan>
+<tspan x="10" y="714">&gt; server listening on http-port 64513</tspan>
 <tspan x="10" y="730">created documentation file:///tmp/app/node_modules/mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="746"></tspan>
 <tspan x="10" y="762"></tspan>
-<tspan x="10" y="778">browserTest - created electron entry-page /tmp/app/node_modules/mysql-lite/tmp/electron.158c45f6\</tspan>
-<tspan x="10" y="794">-45e0-43cf-bb46-fa1e7de3512d.html</tspan>
+<tspan x="10" y="778">browserTest - created electron entry-page /tmp/app/node_modules/mysql-lite/tmp/electron.158c471d\</tspan>
+<tspan x="10" y="794">-b9c3-48d1-a92a-cec310707664.html</tspan>
 <tspan x="10" y="810"></tspan>
-<tspan x="10" y="826">[2235:1203/110855:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
+<tspan x="10" y="826">[2282:1203/112906:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
 <tspan x="10" y="842">/chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more\</tspan>
 <tspan x="10" y="858"> information on developing with the sandbox on.</tspan>
 <tspan x="10" y="874">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="890">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="906">[2235:1203/110856:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
-<tspan x="10" y="922">var/run/dbus/system_bus_socket: Connection refused</tspan>
-<tspan x="10" y="938">[2235:1203/110856:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="954">[2235:1203/110856:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="970">[2255:1203/110856:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="890">[2282:1203/112906:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
+<tspan x="10" y="906">var/run/dbus/system_bus_socket: Connection refused</tspan>
+<tspan x="10" y="922">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+<tspan x="10" y="938">[2282:1203/112906:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="954">[2282:1203/112906:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="970">[2303:1203/112906:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="986">in process gpu-process. </tspan>
-<tspan x="10" y="1002">[2235:1203/110856:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="1002">[2282:1203/112907:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
 <tspan x="10" y="1018"></tspan>
 <tspan x="10" y="1034">browserTest - opened url file:///tmp/app/node_modules/mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="1050"></tspan>
@@ -80,20 +80,21 @@
 <tspan x="10" y="1242">-------------------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="1258">   mysql-lite/     |       100 |       100 |       100 |       100 |</tspan>
 <tspan x="10" y="1274">      lib.mysql.js |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1290">-------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1306">All files          |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1322">-------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1338"></tspan>
-<tspan x="10" y="1354">created coverage file:///tmp/app/node_modules/mysql-lite/tmp/build/coverage.html/index.html</tspan>
-<tspan x="10" y="1370"></tspan>
-<tspan x="10" y="1386">-------------------------------------------------------</tspan>
-<tspan x="10" y="1402">| test-report - npmTestPublished - node - linux v7.2.0 - 2016-12-03T11:08:54.829Z</tspan>
-<tspan x="10" y="1418">|    6833 ms            0 failed        1 passed      |</tspan>
-<tspan x="10" y="1434">-------------------------------------------------------</tspan>
-<tspan x="10" y="1450"></tspan>
-<tspan x="10" y="1466">created test-report file:///tmp/app/node_modules/mysql-lite/tmp/build/test-report.html</tspan>
-<tspan x="10" y="1482"></tspan>
+<tspan x="10" y="1290">      test.js      |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1306">-------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1322">All files          |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1338">-------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1354"></tspan>
+<tspan x="10" y="1370">created coverage file:///tmp/app/node_modules/mysql-lite/tmp/build/coverage.html/index.html</tspan>
+<tspan x="10" y="1386"></tspan>
+<tspan x="10" y="1402">-------------------------------------------------------</tspan>
+<tspan x="10" y="1418">| test-report - npmTestPublished - node - linux v7.2.0 - 2016-12-03T11:29:05.560Z</tspan>
+<tspan x="10" y="1434">|    6675 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1450">-------------------------------------------------------</tspan>
+<tspan x="10" y="1466"></tspan>
+<tspan x="10" y="1482">created test-report file:///tmp/app/node_modules/mysql-lite/tmp/build/test-report.html</tspan>
 <tspan x="10" y="1498"></tspan>
-<tspan x="10" y="1514">npmTestPublished - 0 failed tests</tspan>
+<tspan x="10" y="1514"></tspan>
+<tspan x="10" y="1530">npmTestPublished - 0 failed tests</tspan>
 </text>
 </svg>
