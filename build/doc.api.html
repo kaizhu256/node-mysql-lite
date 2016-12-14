@@ -1019,7 +1019,7 @@ if (err) {
   return connection.rollback(function() {
     throw err;
   });
-}  
+}
 connection.<span class="docApiCodeKeywordSpan">commit</span>(function(err) {
   if (err) {
     return connection.rollback(function() {
@@ -2099,7 +2099,7 @@ connection will return to the pool, ready to be used again by someone else.
 }</pre></li>
         <li>example usage<pre class="docApiCodePre">...
 poolCluster.on(&#x27;remove&#x27;, function (nodeId) {
-  console.log(&#x27;REMOVED NODE : &#x27; + nodeId); // nodeId = SLAVE1 
+  console.log(&#x27;REMOVED NODE : &#x27; + nodeId); // nodeId = SLAVE1
 });
 
 poolCluster.getConnection(&#x27;SLAVE*&#x27;, &#x27;ORDER&#x27;, function (err, connection) {});

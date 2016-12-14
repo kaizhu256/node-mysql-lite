@@ -3,7 +3,7 @@
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26">1       2016-12-01 21:45:55 +0800          87 bytes    .gitignore</tspan>
 <tspan x="10" y="42">2       2016-12-01 21:45:55 +0800        7451 bytes    .travis.yml</tspan>
-<tspan x="10" y="58">3       2016-12-03 19:11:05 +0800        6013 bytes    README.md</tspan>
+<tspan x="10" y="58">3       2016-12-14 11:52:13 +0800       55066 bytes    README.md</tspan>
 <tspan x="10" y="74">4       2016-12-01 21:45:55 +0800          24 bytes    bignumber.js/.npmignore</tspan>
 <tspan x="10" y="90">5       2016-12-01 21:45:55 +0800         138 bytes    bignumber.js/.travis.yml</tspan>
 <tspan x="10" y="106">6       2016-12-01 21:45:55 +0800        1110 bytes    bignumber.js/LICENCE</tspan>
