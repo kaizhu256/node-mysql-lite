@@ -41,7 +41,7 @@
         
         href="https://github.com/kaizhu256/node-mysql-lite#readme"
         
-    >(mysql-lite v2016.11.2)</a>
+    >(mysql-lite v2016.12.28)</a>
 </h1>
 <div class="docApiSectionDiv"><a href="#"><h1>table of contents</h1></a><ul>
 
@@ -165,6 +165,39 @@
             
             <span class="docApiSignatureSpan">object <span class="docApiSignatureSpan">mysql-lite.</span>testRunBeforeTimer</span>
         
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.mysql-lite.Connection">module mysql-lite.Connection</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Connection.Connection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Connection
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Connection.createQuery">
+            function <span class="docApiSignatureSpan">mysql-lite.Connection.</span>createQuery
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Connection.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Connection.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
         </li>
         
     </ol></li>
@@ -319,6 +352,28 @@
         
     </ol></li>
 
+    <li><a href="#module.mysql-lite.Pool">module mysql-lite.Pool</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Pool.Pool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Pool
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Pool.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Pool.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
     <li><a href="#module.mysql-lite.Pool.prototype">module mysql-lite.Pool.prototype</a><ol>
         
         <li>
@@ -389,6 +444,28 @@
         
     </ol></li>
 
+    <li><a href="#module.mysql-lite.PoolCluster">module mysql-lite.PoolCluster</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.PoolCluster.PoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>PoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.PoolCluster.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.PoolCluster.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
     <li><a href="#module.mysql-lite.PoolCluster.prototype">module mysql-lite.PoolCluster.prototype</a><ol>
         
         <li>
@@ -436,6 +513,30 @@
             <a class="docApiElementLiA" href="#element.mysql-lite.PoolCluster.prototype.remove">
             function <span class="docApiSignatureSpan">mysql-lite.PoolCluster.prototype.</span>remove
             <span class="docApiSignatureSpan">(pattern)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.mysql-lite.Query">module mysql-lite.Query</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Query.Query">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Query
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Query.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Query.</span>super_
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
             </a>
             
         </li>
@@ -895,6 +996,117 @@ r connection function.
     </div>
     
     <div class="docApiSectionDiv">
+    <h1><a href="#module.mysql-lite.Connection" id="module.mysql-lite.Connection">module mysql-lite.Connection</a></h1>
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Connection.Connection" id="element.mysql-lite.Connection.Connection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Connection
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Connection(options) {
+  Events.EventEmitter.call(this);
+
+  this.config = options.config;
+
+  this._socket        = options.socket;
+  this._protocol      = new Protocol({config: this.config, connection: this});
+  this._connectCalled = false;
+  this.state          = &#x27;disconnected&#x27;;
+  this.threadId       = null;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Connection.createQuery" id="element.mysql-lite.Connection.createQuery">
+            function <span class="docApiSignatureSpan">mysql-lite.Connection.</span>createQuery
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function createQuery(sql,
+ values,
+ callback) {
+  if (sql instanceof Query) {
+    return sql;
+  }
+
+  var cb      = bindToCurrentDomain(callback);
+  var options = {};
+
+  if (typeof sql === &#x27;function&#x27;) {
+    cb = bindToCurrentDomain(sql);
+    return new Query(options, cb);
+  }
+
+  if (typeof sql === &#x27;object&#x27;) {
+    for (var prop in sql) {
+      options[prop] = sql[prop];
+    }
+
+    if (typeof values === &#x27;function&#x27;) {
+      cb = bindToCurrentDomain(values);
+    } else if (values !== undefined) {
+      options.values = values;
+    }
+
+    return new Query(options, cb);
+  }
+
+  options.sql    = sql;
+  options.values = values;
+
+  if (typeof values === &#x27;function&#x27;) {
+    cb = bindToCurrentDomain(values);
+    options.values = undefined;
+  }
+
+  if (cb === undefined &amp;&amp; callback !== undefined) {
+    throw new TypeError(&#x27;argument callback must be a function when provided&#x27;);
+  }
+
+  return new Query(options, cb);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+(function () {
+    &#x27;use strict&#x27;;
+    var local;
+    local = require(&#x27;mysql&#x27;);
+    local.Connection = local.createConnection({}).constructor;
+    local.Pool = local.createPool({}).constructor;
+    local.PoolCluster = local.createPoolCluster({}).constructor;
+    local.Query = local.<span class="docApiCodeKeywordSpan">createQuery</span>({}).constructor;
+    module.exports = local;
+}());
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Connection.super_" id="element.mysql-lite.Connection.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Connection.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
     <h1><a href="#module.mysql-lite.Connection.prototype" id="module.mysql-lite.Connection.prototype">module mysql-lite.Connection.prototype</a></h1>
         
         
@@ -1019,7 +1231,7 @@ if (err) {
   return connection.rollback(function() {
     throw err;
   });
-}  
+}
 connection.<span class="docApiCodeKeywordSpan">commit</span>(function(err) {
   if (err) {
     return connection.rollback(function() {
@@ -1526,6 +1738,49 @@ connection.query(&#x27;INSERT INTO log SET data=?&#x27;, log, function(err, resu
     </div>
     
     <div class="docApiSectionDiv">
+    <h1><a href="#module.mysql-lite.Pool" id="module.mysql-lite.Pool">module mysql-lite.Pool</a></h1>
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Pool.Pool" id="element.mysql-lite.Pool.Pool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Pool
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Pool(options) {
+  EventEmitter.call(this);
+  this.config = options.config;
+  this.config.connectionConfig.pool = this;
+
+  this._acquiringConnections = [];
+  this._allConnections       = [];
+  this._freeConnections      = [];
+  this._connectionQueue      = [];
+  this._closed               = false;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Pool.super_" id="element.mysql-lite.Pool.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Pool.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
     <h1><a href="#module.mysql-lite.Pool.prototype" id="module.mysql-lite.Pool.prototype">module mysql-lite.Pool.prototype</a></h1>
         
         
@@ -1898,6 +2153,53 @@ connection.end();
     </div>
     
     <div class="docApiSectionDiv">
+    <h1><a href="#module.mysql-lite.PoolCluster" id="module.mysql-lite.PoolCluster">module mysql-lite.PoolCluster</a></h1>
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.PoolCluster.PoolCluster" id="element.mysql-lite.PoolCluster.PoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>PoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function PoolCluster(config) {
+  EventEmitter.call(this);
+
+  config = config || {};
+  this._canRetry = typeof config.canRetry === &#x27;undefined&#x27; ? true : config.canRetry;
+  this._defaultSelector = config.defaultSelector || &#x27;RR&#x27;;
+  this._removeNodeErrorCount = config.removeNodeErrorCount || 5;
+  this._restoreNodeTimeout = config.restoreNodeTimeout || 0;
+
+  this._closed = false;
+  this._findCaches = Object.create(null);
+  this._lastId = 0;
+  this._namespaces = Object.create(null);
+  this._nodes = Object.create(null);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.PoolCluster.super_" id="element.mysql-lite.PoolCluster.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.PoolCluster.</span>super_
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
     <h1><a href="#module.mysql-lite.PoolCluster.prototype" id="module.mysql-lite.PoolCluster.prototype">module mysql-lite.PoolCluster.prototype</a></h1>
         
         
@@ -2099,7 +2401,7 @@ connection will return to the pool, ready to be used again by someone else.
 }</pre></li>
         <li>example usage<pre class="docApiCodePre">...
 poolCluster.on(&#x27;remove&#x27;, function (nodeId) {
-  console.log(&#x27;REMOVED NODE : &#x27; + nodeId); // nodeId = SLAVE1 
+  console.log(&#x27;REMOVED NODE : &#x27; + nodeId); // nodeId = SLAVE1
 });
 
 poolCluster.getConnection(&#x27;SLAVE*&#x27;, &#x27;ORDER&#x27;, function (err, connection) {});
@@ -2153,6 +2455,77 @@ poolCluster.getConnection(function (err, connection) {});
 // Target Group : MASTER, Selector : round-robin
 poolCluster.getConnection(&#x27;MASTER&#x27;, function (err, connection) {});
 ...</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.mysql-lite.Query" id="module.mysql-lite.Query">module mysql-lite.Query</a></h1>
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Query.Query" id="element.mysql-lite.Query.Query">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Query
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Query(options,
+ callback) {
+  Sequence.call(this, options, callback);
+
+  this.sql = options.sql;
+  this.values = options.values;
+  this.typeCast = (options.typeCast === undefined)
+    ? true
+    : options.typeCast;
+  this.nestTables = options.nestTables || false;
+
+  this._resultSet = null;
+  this._results   = [];
+  this._fields    = [];
+  this._index     = 0;
+  this._loadError = null;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Query.super_" id="element.mysql-lite.Query.super_">
+            function <span class="docApiSignatureSpan">mysql-lite.Query.</span>super_
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Sequence(options,
+ callback) {
+  if (typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  EventEmitter.call(this);
+
+  options = options || {};
+
+  this._callback = callback;
+  this._callSite = null;
+  this._ended    = false;
+  this._timeout  = options.timeout;
+
+  // For Timers
+  this._idleNext    = null;
+  this._idlePrev    = null;
+  this._idleStart   = null;
+  this._idleTimeout = -1;
+  this._repeat      = null;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
         </ul>
         
         
