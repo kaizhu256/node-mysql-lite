@@ -21,7 +21,6 @@
         Error.stackTraceLimit = 20;
         // init local
         local = {};
-        local = {};
         // init modeJs
         local.modeJs = 'node';
         // init global
@@ -45,12 +44,6 @@
          * this function will test build's doc handling-behavior
          */
             options = {};
-            options.exampleFileList = [
-                'README.md',
-                './mysql/Readme.md',
-                'test.js',
-                local.env.npm_package_main + '.js'
-            ];
             local.buildDoc(options, onError);
         };
         break;
