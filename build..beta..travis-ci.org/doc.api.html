@@ -1,0 +1,2486 @@
+<style>
+.docApiDiv {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.docApiDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.docApiDiv a[href]:hover {
+    text-decoration: underline;
+}
+.docApiSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.docApiCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.docApiCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.docApiCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.docApiSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<div class="docApiDiv">
+<h1>api documentation
+    <a
+        
+        href="https://github.com/kaizhu256/node-mysql-lite#readme"
+        
+    >(mysql-lite v2016.11.1)</a>
+</h1>
+<div class="docApiSectionDiv"><a href="#"><h1>table of contents</h1></a><ul>
+
+    <li><a href="#module.db-lite.Connection.prototype">module db-lite.Connection.prototype</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.beginTransaction">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>beginTransaction
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.changeUser">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>changeUser
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.commit">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>commit
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.connect">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>connect
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.destroy">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>destroy
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>end
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.escape">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>escape
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.escapeId">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>escapeId
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.format">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>format
+            <span class="docApiSignatureSpan">(sql,
+ values)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.pause">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>pause
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.ping">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>ping
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.query">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>query
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.resume">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>resume
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.rollback">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>rollback
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Connection.prototype.statistics">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>statistics
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.db-lite.Pool.prototype">module db-lite.Pool.prototype</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.acquireConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>acquireConnection
+            <span class="docApiSignatureSpan">(connection,
+ cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>end
+            <span class="docApiSignatureSpan">(cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.escape">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>escape
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.escapeId">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>escapeId
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.getConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>getConnection
+            <span class="docApiSignatureSpan">(cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.query">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>query
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Pool.prototype.releaseConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>releaseConnection
+            <span class="docApiSignatureSpan">(connection)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.db-lite.PoolCluster.prototype">module db-lite.PoolCluster.prototype</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.PoolCluster.prototype.add">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>add
+            <span class="docApiSignatureSpan">(id,
+ config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.PoolCluster.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>end
+            <span class="docApiSignatureSpan">(callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.PoolCluster.prototype.getConnection">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>getConnection
+            <span class="docApiSignatureSpan">(pattern,
+ selector,
+ cb)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.PoolCluster.prototype.of">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>of
+            <span class="docApiSignatureSpan">(pattern,
+ selector)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.PoolCluster.prototype.remove">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>remove
+            <span class="docApiSignatureSpan">(pattern)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.db-lite.Query.prototype">module db-lite.Query.prototype</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.EofPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>EofPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.ErrorPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>ErrorPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.FieldPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>FieldPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.OkPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>OkPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.ResultSetHeaderPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>ResultSetHeaderPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.RowDataPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>RowDataPacket
+            <span class="docApiSignatureSpan">(packet,
+ parser,
+ connection)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.determinePacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>determinePacket
+            <span class="docApiSignatureSpan">(firstByte,
+ parser)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.start">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>start
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.db-lite.Query.prototype.stream">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>stream
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+    </ol></li>
+
+    <li><a href="#module.mysql-lite">module mysql-lite</a><ol>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Connection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Connection
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Pool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Pool
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.PoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>PoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.Query">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Query
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.createConnection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createConnection
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.createPool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createPool
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.createPoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createPoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.createQuery">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createQuery
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ callback)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.escape">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>escape
+            <span class="docApiSignatureSpan">(value,
+ stringifyObjects,
+ timeZone)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.escapeId">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>escapeId
+            <span class="docApiSignatureSpan">(value,
+ forbidQualified)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.format">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>format
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ stringifyObjects,
+ timeZone)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <a class="docApiElementLiA" href="#element.mysql-lite.middleware">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>middleware
+            <span class="docApiSignatureSpan">(request,
+ response,
+ nextMiddleware)</span>
+            </a>
+            
+        </li>
+        
+        <li>
+            
+            <span class="docApiSignatureSpan">object <span class="docApiSignatureSpan">mysql-lite.</span>testRunBeforeDone</span>
+        
+        </li>
+        
+        <li>
+            
+            <span class="docApiSignatureSpan">object <span class="docApiSignatureSpan">mysql-lite.</span>testRunBeforeTimer</span>
+        
+        </li>
+        
+    </ol></li>
+
+</ul></div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.db-lite.Connection.prototype" id="module.db-lite.Connection.prototype">module db-lite.Connection.prototype</a></h1>
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.beginTransaction" id="element.db-lite.Connection.prototype.beginTransaction">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>beginTransaction
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function beginTransaction(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  options = options || {};
+  options.sql = &#x27;START TRANSACTION&#x27;;
+  options.values = null;
+
+  return this.query(options, callback);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+&#x60;&#x60;&#x60;
+
+## Transactions
+
+Simple transaction support is available at the connection level:
+
+&#x60;&#x60;&#x60;js
+connection.<span class="docApiCodeKeywordSpan">beginTransaction</span>(function(err) {
+if (err) { throw err; }
+connection.query(&#x27;INSERT INTO posts SET title=?&#x27;, title, function(err, result) {
+  if (err) {
+    return connection.rollback(function() {
+      throw err;
+    });
+  }
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.changeUser" id="element.db-lite.Connection.prototype.changeUser">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>changeUser
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function changeUser(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  this._implyConnect();
+
+  var charsetNumber = (options.charset)
+    ? ConnectionConfig.getCharsetNumber(options.charset)
+    : this.config.charsetNumber;
+
+  return this._protocol.changeUser({
+    user          : options.user || this.config.user,
+    password      : options.password || this.config.password,
+    database      : options.database || this.config.database,
+    timeout       : options.timeout,
+    charsetNumber : charsetNumber,
+    currentConfig : this.config
+  }, bindToCurrentDomain(callback));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+## Switching users and altering connection state
+
+MySQL offers a changeUser command that allows you to alter the current user and
+other aspects of the connection without shutting down the underlying socket:
+
+&#x60;&#x60;&#x60;js
+connection.<span class="docApiCodeKeywordSpan">changeUser</span>({user : &#x27;john&#x27;}, function(err) {
+  if (err) throw err;
+});
+&#x60;&#x60;&#x60;
+
+The available options for this feature are:
+
+* &#x60;user&#x60;: The name of the new user (defaults to the previous one).
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.commit" id="element.db-lite.Connection.prototype.commit">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>commit
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function commit(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  options = options || {};
+  options.sql = &#x27;COMMIT&#x27;;
+  options.values = null;
+
+  return this.query(options, callback);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+    connection.query(&#x27;INSERT INTO log SET data=?&#x27;, log, function(err, result) {
+if (err) {
+  return connection.rollback(function() {
+    throw err;
+  });
+}  
+connection.<span class="docApiCodeKeywordSpan">commit</span>(function(err) {
+  if (err) {
+    return connection.rollback(function() {
+      throw err;
+    });
+  }
+  console.log(&#x27;success!&#x27;);
+});
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.connect" id="element.db-lite.Connection.prototype.connect">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>connect
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function connect(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  if (!this._connectCalled) {
+    this._connectCalled = true;
+
+    // Connect either via a UNIX domain socket or a TCP socket.
+    this._socket = (this.config.socketPath)
+      ? Net.createConnection(this.config.socketPath)
+      : Net.createConnection(this.config.port, this.config.host);
+
+    // Connect socket to connection domain
+    if (Events.usingDomains) {
+      if (this._socket.domain) {
+        this._socket.domain.remove(this._socket);
+      }
+
+      if (this.domain) {
+        this.domain.add(this._socket);
+      }
+    }
+
+    var connection = this;
+    this._protocol.on(&#x27;data&#x27;, function(data) {
+      connection._socket.write(data);
+    });
+    this._socket.on(&#x27;data&#x27;, function(data) {
+      connection._protocol.write(data);
+    });
+    this._protocol.on(&#x27;end&#x27;, function() {
+      connection._socket.end();
+    });
+    this._socket.on(&#x27;end&#x27;, function(err) {
+      connection._protocol.end();
+    });
+
+    this._socket.on(&#x27;error&#x27;, this._handleNetworkError.bind(this));
+    this._socket.on(&#x27;connect&#x27;, this._handleProtocolConnect.bind(this));
+    this._protocol.on(&#x27;handshake&#x27;, this._handleProtocolHandshake.bind(this));
+    this._protocol.on(&#x27;unhandledError&#x27;, this._handleProtocolError.bind(this));
+    this._protocol.on(&#x27;drain&#x27;, this._handleProtocolDrain.bind(this));
+    this._protocol.on(&#x27;end&#x27;, this._handleProtocolEnd.bind(this));
+    this._protocol.on(&#x27;enqueue&#x27;, this._handleProtocolEnqueue.bind(this));
+
+    if (this.config.connectTimeout) {
+      var handleConnectTimeout = this._handleConnectTimeout.bind(this);
+
+      this._socket.setTimeout(this.config.connectTimeout, handleConnectTimeout);
+      this._socket.once(&#x27;connect&#x27;, function() {
+        this.setTimeout(0, handleConnectTimeout);
+      });
+    }
+  }
+
+  this._protocol.handshake(options, bindToCurrentDomain(callback));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+var connection = mysql.createConnection({
+  host     : &#x27;localhost&#x27;,
+  user     : &#x27;me&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+connection.<span class="docApiCodeKeywordSpan">connect</span>();
+
+connection.query(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.destroy" id="element.db-lite.Connection.prototype.destroy">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>destroy
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">destroy = function () {
+  this.state = &#x27;disconnected&#x27;;
+  this._implyConnect();
+  this._socket.destroy();
+  this._protocol.destroy();
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+An alternative way to end the connection is to call the &#x60;destroy()&#x60; method.
+This will cause an immediate termination of the underlying socket.
+Additionally &#x60;destroy()&#x60; guarantees that no more events or callbacks will be
+triggered for the connection.
+
+&#x60;&#x60;&#x60;js
+connection.<span class="docApiCodeKeywordSpan">destroy</span>();
+&#x60;&#x60;&#x60;
+
+Unlike &#x60;end()&#x60; the &#x60;destroy()&#x60; method does not take a callback argument.
+
+## Pooling connections
+
+Rather than creating and managing connections one-by-one, this module also
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.end" id="element.db-lite.Connection.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>end
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function end(options,
+ callback) {
+  var cb   = callback;
+  var opts = options;
+
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    cb   = options;
+    opts = null;
+  }
+
+  // create custom options reference
+  opts = Object.create(opts || null);
+
+  if (opts.timeout === undefined) {
+    // default timeout of 30 seconds
+    opts.timeout = 30000;
+  }
+
+  this._implyConnect();
+  this._protocol.quit(opts, bindToCurrentDomain(cb));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+connection.query(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+if (err) throw err;
+
+console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+
+connection.<span class="docApiCodeKeywordSpan">end</span>();
+&#x60;&#x60;&#x60;
+
+From this example, you can learn the following:
+
+* Every method you invoke on a connection is queued and executed in sequence.
+* Closing the connection is done using &#x60;end()&#x60; which makes sure all remaining
+queries are executed before sending a quit packet to the mysql server.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.escape" id="element.db-lite.Connection.prototype.escape">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>escape
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">escape = function (value) {
+  return SqlString.escape(value, false, this.config.timezone);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+);
+&#x60;&#x60;&#x60;
+
+## Escaping query values
+
+In order to avoid SQL Injection attacks, you should always escape any user
+provided data before using it inside a SQL query. You can do so using the
+&#x60;mysql.<span class="docApiCodeKeywordSpan">escape</span>()&#x60;, &#x60;connection.escape()&#x60; or &#x60;pool.escape()&#x\
+60; methods:
+
+&#x60;&#x60;&#x60;js
+var userId = &#x27;some user provided value&#x27;;
+var sql    = &#x27;SELECT * FROM users WHERE id = &#x27; + connection.escape(userId);
+connection.query(sql, function(err, results) {
+  // ...
+});
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.escapeId" id="element.db-lite.Connection.prototype.escapeId">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>escapeId
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function escapeId(value) {
+  return SqlString.escapeId(value, false);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+console.log(query); // SELECT * FROM posts WHERE title=&#x27;Hello MySQL&#x27;
+&#x60;&#x60;&#x60;
+
+## Escaping query identifiers
+
+If you can&#x27;t trust an SQL identifier (database / table / column name) because it is
+provided by a user, you should escape it with &#x60;mysql.<span class="docApiCodeKeywordSpan">escapeId</span>(identifier)&#x60;,
+&#x60;connection.escapeId(identifier)&#x60; or &#x60;pool.escapeId(identifier)&#x60; like this:
+
+&#x60;&#x60;&#x60;js
+var sorter = &#x27;date&#x27;;
+var sql    = &#x27;SELECT * FROM posts ORDER BY &#x27; + connection.escapeId(sorter);
+connection.query(sql, function(err, results) {
+// ...
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.format" id="element.db-lite.Connection.prototype.format">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>format
+            <span class="docApiSignatureSpan">(sql,
+ values)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">format = function (sql,
+ values) {
+  if (typeof this.config.queryFormat === &#x27;function&#x27;) {
+    return this.config.queryFormat.call(this, sql, values, this.config.timezone);
+  }
+  return SqlString.format(sql, values, this.config.stringifyObjects, this.config.timezone);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+### Preparing Queries
+
+You can use mysql.format to prepare a query with multiple insertion points, utilizing the proper escaping for ids and values. A \
+simple example of this follows:
+
+&#x60;&#x60;&#x60;js
+var sql = &quot;SELECT * FROM ?? WHERE ?? = ?&quot;;
+var inserts = [&#x27;users&#x27;, &#x27;id&#x27;, userId];
+sql = mysql.<span class="docApiCodeKeywordSpan">format</span>(sql, inserts);
+&#x60;&#x60;&#x60;
+
+Following this you then have a valid, escaped query that you can then send to the database safely. This is useful if you are loo\
+king to prepare the query before actually sending it to the database. As mysql.format is exposed from SqlString.format you also \
+have the option (but are not required) to pass in stringifyObject and timezone, allowing you provide a custom means of turning o\
+bjects into strings, as well as a location-specific/timezone-aware Date.
+
+### Custom format
+
+If you prefer to have another type of query escape format, there&#x27;s a connection configuration option you can use to define \
+a custom format function. You can access the connection object if you want to use the built-in &#x60;.escape()&#x60; or any othe\
+r connection function.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.pause" id="element.db-lite.Connection.prototype.pause">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>pause
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">pause = function () {
+  this._socket.pause();
+  this._protocol.pause();
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+  // Handle error, an &#x27;end&#x27; event will be emitted after this as well
+})
+.on(&#x27;fields&#x27;, function(fields) {
+  // the field packets for the rows to follow
+})
+.on(&#x27;result&#x27;, function(row) {
+  // Pausing the connnection is useful if your processing involves I/O
+  connection.<span class="docApiCodeKeywordSpan">pause</span>();
+
+  processRow(row, function() {
+    connection.resume();
+  });
+})
+.on(&#x27;end&#x27;, function() {
+  // all rows have been received
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.ping" id="element.db-lite.Connection.prototype.ping">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>ping
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function ping(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  this._implyConnect();
+  this._protocol.ping(options, bindToCurrentDomain(callback));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+## Ping
+
+A ping packet can be sent over a connection using the &#x60;connection.ping&#x60; method. This
+method will send a ping packet to the server and when the server responds, the callback
+will fire. If an error occurred, the callback will fire with an error argument.
+
+&#x60;&#x60;&#x60;js
+connection.<span class="docApiCodeKeywordSpan">ping</span>(function (err) {
+  if (err) throw err;
+  console.log(&#x27;Server responded to ping&#x27;);
+})
+&#x60;&#x60;&#x60;
+
+## Timeouts
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.query" id="element.db-lite.Connection.prototype.query">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>query
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function query(sql,
+ values,
+ cb) {
+  var query = Connection.createQuery(sql, values, cb);
+  query._connection = this;
+
+  if (!(typeof sql === &#x27;object&#x27; &amp;&amp; &#x27;typeCast&#x27; in sql)) {
+    query.typeCast = this.config.typeCast;
+  }
+
+  if (query.sql) {
+    query.sql = this.format(query.sql, query.values);
+  }
+
+  this._implyConnect();
+
+  return this._protocol._enqueue(query);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+  user     : &#x27;me&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+connection.connect();
+
+connection.<span class="docApiCodeKeywordSpan">query</span>(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+
+connection.end();
+&#x60;&#x60;&#x60;
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.resume" id="element.db-lite.Connection.prototype.resume">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>resume
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">resume = function () {
+  this._socket.resume();
+  this._protocol.resume();
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+    // the field packets for the rows to follow
+  })
+  .on(&#x27;result&#x27;, function(row) {
+    // Pausing the connnection is useful if your processing involves I/O
+    connection.pause();
+
+    processRow(row, function() {
+      connection.<span class="docApiCodeKeywordSpan">resume</span>();
+    });
+  })
+  .on(&#x27;end&#x27;, function() {
+    // all rows have been received
+  });
+&#x60;&#x60;&#x60;
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.rollback" id="element.db-lite.Connection.prototype.rollback">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>rollback
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function rollback(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  options = options || {};
+  options.sql = &#x27;ROLLBACK&#x27;;
+  options.values = null;
+
+  return this.query(options, callback);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+Simple transaction support is available at the connection level:
+
+&#x60;&#x60;&#x60;js
+connection.beginTransaction(function(err) {
+  if (err) { throw err; }
+  connection.query(&#x27;INSERT INTO posts SET title=?&#x27;, title, function(err, result) {
+if (err) {
+  return connection.<span class="docApiCodeKeywordSpan">rollback</span>(function() {
+    throw err;
+  });
+}
+
+var log = &#x27;Post &#x27; + result.insertId + &#x27; added&#x27;;
+
+connection.query(&#x27;INSERT INTO log SET data=?&#x27;, log, function(err, result) {
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Connection.prototype.statistics" id="element.db-lite.Connection.prototype.statistics">
+            function <span class="docApiSignatureSpan">db-lite.Connection.prototype.</span>statistics
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function statistics(options,
+ callback) {
+  if (!callback &amp;&amp; typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  }
+
+  this._implyConnect();
+  this._protocol.stats(options, bindToCurrentDomain(callback));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.db-lite.Pool.prototype" id="module.db-lite.Pool.prototype">module db-lite.Pool.prototype</a></h1>
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.acquireConnection" id="element.db-lite.Pool.prototype.acquireConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>acquireConnection
+            <span class="docApiSignatureSpan">(connection,
+ cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function acquireConnection(connection,
+ cb) {
+  if (connection._pool !== this) {
+    throw new Error(&#x27;Connection acquired from wrong pool.&#x27;);
+  }
+
+  var changeUser = this._needsChangeUser(connection);
+  var pool       = this;
+
+  this._acquiringConnections.push(connection);
+
+  function onOperationComplete(err) {
+    spliceConnection(pool._acquiringConnections, connection);
+
+    if (pool._closed) {
+      err = new Error(&#x27;Pool is closed.&#x27;);
+      err.code = &#x27;POOL_CLOSED&#x27;;
+    }
+
+    if (err) {
+      pool._connectionQueue.unshift(cb);
+      pool._purgeConnection(connection);
+      return;
+    }
+
+    if (changeUser) {
+      pool.emit(&#x27;connection&#x27;, connection);
+    }
+
+    cb(null, connection);
+  }
+
+  if (changeUser) {
+    // restore user back to pool configuration
+    connection.config = this.config.newConnectionConfig();
+    connection.changeUser({timeout: this.config.acquireTimeout}, onOperationComplete);
+  } else {
+    // ping connection
+    connection.ping({timeout: this.config.acquireTimeout}, onOperationComplete);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.end" id="element.db-lite.Pool.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>end
+            <span class="docApiSignatureSpan">(cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">end = function (cb) {
+  this._closed = true;
+
+  if (typeof cb !== &#x27;function&#x27;) {
+    cb = function (err) {
+      if (err) throw err;
+    };
+  }
+
+  var calledBack   = false;
+  var waitingClose = 0;
+
+  function onEnd(err) {
+    if (!calledBack &amp;&amp; (err || --waitingClose &lt;= 0)) {
+      calledBack = true;
+      cb(err);
+    }
+  }
+
+  while (this._allConnections.length !== 0) {
+    waitingClose++;
+    this._purgeConnection(this._allConnections[0], onEnd);
+  }
+
+  if (waitingClose === 0) {
+    process.nextTick(onEnd);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+connection.query(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+if (err) throw err;
+
+console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+
+connection.<span class="docApiCodeKeywordSpan">end</span>();
+&#x60;&#x60;&#x60;
+
+From this example, you can learn the following:
+
+* Every method you invoke on a connection is queued and executed in sequence.
+* Closing the connection is done using &#x60;end()&#x60; which makes sure all remaining
+queries are executed before sending a quit packet to the mysql server.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.escape" id="element.db-lite.Pool.prototype.escape">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>escape
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">escape = function (value) {
+  return mysql.escape(value, this.config.connectionConfig.stringifyObjects, this.config.connectionConfig.timezone);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+);
+&#x60;&#x60;&#x60;
+
+## Escaping query values
+
+In order to avoid SQL Injection attacks, you should always escape any user
+provided data before using it inside a SQL query. You can do so using the
+&#x60;mysql.<span class="docApiCodeKeywordSpan">escape</span>()&#x60;, &#x60;connection.escape()&#x60; or &#x60;pool.escape()&#x\
+60; methods:
+
+&#x60;&#x60;&#x60;js
+var userId = &#x27;some user provided value&#x27;;
+var sql    = &#x27;SELECT * FROM users WHERE id = &#x27; + connection.escape(userId);
+connection.query(sql, function(err, results) {
+  // ...
+});
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.escapeId" id="element.db-lite.Pool.prototype.escapeId">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>escapeId
+            <span class="docApiSignatureSpan">(value)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function escapeId(value) {
+  return mysql.escapeId(value, false);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+console.log(query); // SELECT * FROM posts WHERE title=&#x27;Hello MySQL&#x27;
+&#x60;&#x60;&#x60;
+
+## Escaping query identifiers
+
+If you can&#x27;t trust an SQL identifier (database / table / column name) because it is
+provided by a user, you should escape it with &#x60;mysql.<span class="docApiCodeKeywordSpan">escapeId</span>(identifier)&#x60;,
+&#x60;connection.escapeId(identifier)&#x60; or &#x60;pool.escapeId(identifier)&#x60; like this:
+
+&#x60;&#x60;&#x60;js
+var sorter = &#x27;date&#x27;;
+var sql    = &#x27;SELECT * FROM posts ORDER BY &#x27; + connection.escapeId(sorter);
+connection.query(sql, function(err, results) {
+// ...
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.getConnection" id="element.db-lite.Pool.prototype.getConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>getConnection
+            <span class="docApiSignatureSpan">(cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">getConnection = function (cb) {
+
+  if (this._closed) {
+    var err = new Error(&#x27;Pool is closed.&#x27;);
+    err.code = &#x27;POOL_CLOSED&#x27;;
+    process.nextTick(function () {
+      cb(err);
+    });
+    return;
+  }
+
+  var connection;
+  var pool = this;
+
+  if (this._freeConnections.length &gt; 0) {
+    connection = this._freeConnections.shift();
+    this.acquireConnection(connection, cb);
+    return;
+  }
+
+  if (this.config.connectionLimit === 0 || this._allConnections.length &lt; this.config.connectionLimit) {
+    connection = new PoolConnection(this, { config: this.config.newConnectionConfig() });
+
+    this._acquiringConnections.push(connection);
+    this._allConnections.push(connection);
+
+    connection.connect({timeout: this.config.acquireTimeout}, function onConnect(err) {
+      spliceConnection(pool._acquiringConnections, connection);
+
+      if (pool._closed) {
+        err = new Error(&#x27;Pool is closed.&#x27;);
+        err.code = &#x27;POOL_CLOSED&#x27;;
+      }
+
+      if (err) {
+        pool._purgeConnection(connection);
+        cb(err);
+        return;
+      }
+
+      pool.emit(&#x27;connection&#x27;, connection);
+      cb(null, connection);
+    });
+    return;
+  }
+
+  if (!this.config.waitForConnections) {
+    process.nextTick(function(){
+      var err = new Error(&#x27;No connections available.&#x27;);
+      err.code = &#x27;POOL_CONNLIMIT&#x27;;
+      cb(err);
+    });
+    return;
+  }
+
+  this._enqueueCallback(cb);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+var pool  = mysql.createPool({
+  host     : &#x27;example.org&#x27;,
+  user     : &#x27;bob&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+pool.<span class="docApiCodeKeywordSpan">getConnection</span>(function(err, connection) {
+  // connected! (unless &#x60;err&#x60; is set)
+});
+&#x60;&#x60;&#x60;
+
+When you are done with a connection, just call &#x60;connection.release()&#x60; and the
+connection will return to the pool, ready to be used again by someone else.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.query" id="element.db-lite.Pool.prototype.query">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>query
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">query = function (sql,
+ values,
+ cb) {
+  var query = Connection.createQuery(sql, values, cb);
+
+  if (!(typeof sql === &#x27;object&#x27; &amp;&amp; &#x27;typeCast&#x27; in sql)) {
+    query.typeCast = this.config.connectionConfig.typeCast;
+  }
+
+  if (this.config.connectionConfig.trace) {
+    // Long stack trace support
+    query._callSite = new Error();
+  }
+
+  this.getConnection(function (err, conn) {
+    if (err) {
+      query.on(&#x27;error&#x27;, function () {});
+      query.end(err);
+      return;
+    }
+
+    // Release connection based off event
+    query.once(&#x27;end&#x27;, function() {
+      conn.release();
+    });
+
+    conn.query(query);
+  });
+
+  return query;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+  user     : &#x27;me&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+connection.connect();
+
+connection.<span class="docApiCodeKeywordSpan">query</span>(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+
+connection.end();
+&#x60;&#x60;&#x60;
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Pool.prototype.releaseConnection" id="element.db-lite.Pool.prototype.releaseConnection">
+            function <span class="docApiSignatureSpan">db-lite.Pool.prototype.</span>releaseConnection
+            <span class="docApiSignatureSpan">(connection)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function releaseConnection(connection) {
+  var pool = this;
+
+  if (this._acquiringConnections.indexOf(connection) !== -1) {
+    // connection is being acquired
+    return;
+  }
+
+  if (connection._pool) {
+    if (connection._pool !== this) {
+      throw new Error(&#x27;Connection released to wrong pool&#x27;);
+    }
+
+    if (this._freeConnections.indexOf(connection) !== -1) {
+      // connection already in free connection pool
+      // this won&#x27;t catch all double-release cases
+      throw new Error(&#x27;Connection already released&#x27;);
+    } else {
+      // add connection to end of free queue
+      this._freeConnections.push(connection);
+    }
+  }
+
+  if (this._closed) {
+    // empty the connection queue
+    this._connectionQueue.splice(0).forEach(function (cb) {
+      var err = new Error(&#x27;Pool is closed.&#x27;);
+      err.code = &#x27;POOL_CLOSED&#x27;;
+      process.nextTick(function () {
+        cb(err);
+      });
+    });
+  } else if (this._connectionQueue.length) {
+    // get connection with next waiting callback
+    this.getConnection(this._connectionQueue.shift());
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.db-lite.PoolCluster.prototype" id="module.db-lite.PoolCluster.prototype">module db-lite.PoolCluster.prototype</a></h1>
+        
+        
+        <h2>
+            <a href="#element.db-lite.PoolCluster.prototype.add" id="element.db-lite.PoolCluster.prototype.add">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>add
+            <span class="docApiSignatureSpan">(id,
+ config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function add(id,
+ config) {
+  if (this._closed) {
+    throw new Error(&#x27;PoolCluster is closed.&#x27;);
+  }
+
+  var nodeId = typeof id === &#x27;object&#x27;
+    ? &#x27;CLUSTER::&#x27; + (++this._lastId)
+    : String(id);
+
+  if (this._nodes[nodeId] !== undefined) {
+    throw new Error(&#x27;Node ID &quot;&#x27; + nodeId + &#x27;&quot; is already defined in PoolCluster.&#x27;);
+  }
+
+  var poolConfig = typeof id !== &#x27;object&#x27;
+    ? new PoolConfig(config)
+    : new PoolConfig(id);
+
+  this._nodes[nodeId] = {
+    id            : nodeId,
+    errorCount    : 0,
+    pool          : new Pool({config: poolConfig}),
+    _offlineUntil : 0
+  };
+
+  this._clearFindCaches();
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+PoolCluster provides multiple hosts connection. (group &amp; retry &amp; selector)
+
+&#x60;&#x60;&#x60;js
+// create
+var poolCluster = mysql.createPoolCluster();
+
+// add configurations (the config is a pool config object)
+poolCluster.<span class="docApiCodeKeywordSpan">add</span>(config); // add configuration with automatic name
+poolCluster.add(&#x27;MASTER&#x27;, masterConfig); // add a named configuration
+poolCluster.add(&#x27;SLAVE1&#x27;, slave1Config);
+poolCluster.add(&#x27;SLAVE2&#x27;, slave2Config);
+
+// remove configurations
+poolCluster.remove(&#x27;SLAVE2&#x27;); // By nodeId
+poolCluster.remove(&#x27;SLAVE*&#x27;); // By target group : SLAVE1-2
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.PoolCluster.prototype.end" id="element.db-lite.PoolCluster.prototype.end">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>end
+            <span class="docApiSignatureSpan">(callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function end(callback) {
+  var cb = callback !== undefined
+    ? callback
+    : _cb;
+
+  if (typeof cb !== &#x27;function&#x27;) {
+    throw TypeError(&#x27;callback argument must be a function&#x27;);
+  }
+
+  if (this._closed) {
+    process.nextTick(cb);
+    return;
+  }
+
+  this._closed = true;
+
+  var calledBack   = false;
+  var nodeIds      = Object.keys(this._nodes);
+  var waitingClose = 0;
+
+  function onEnd(err) {
+    if (!calledBack &amp;&amp; (err || --waitingClose &lt;= 0)) {
+      calledBack = true;
+      cb(err);
+    }
+  }
+
+  for (var i = 0; i &lt; nodeIds.length; i++) {
+    var nodeId = nodeIds[i];
+    var node = this._nodes[nodeId];
+
+    waitingClose++;
+    node.pool.end(onEnd);
+  }
+
+  if (waitingClose === 0) {
+    process.nextTick(onEnd);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+connection.query(&#x27;SELECT 1 + 1 AS solution&#x27;, function(err, rows, fields) {
+if (err) throw err;
+
+console.log(&#x27;The solution is: &#x27;, rows[0].solution);
+});
+
+connection.<span class="docApiCodeKeywordSpan">end</span>();
+&#x60;&#x60;&#x60;
+
+From this example, you can learn the following:
+
+* Every method you invoke on a connection is queued and executed in sequence.
+* Closing the connection is done using &#x60;end()&#x60; which makes sure all remaining
+queries are executed before sending a quit packet to the mysql server.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.PoolCluster.prototype.getConnection" id="element.db-lite.PoolCluster.prototype.getConnection">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>getConnection
+            <span class="docApiSignatureSpan">(pattern,
+ selector,
+ cb)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">getConnection = function (pattern,
+ selector,
+ cb) {
+  var namespace;
+  if (typeof pattern === &#x27;function&#x27;) {
+    cb = pattern;
+    namespace = this.of();
+  } else {
+    if (typeof selector === &#x27;function&#x27;) {
+      cb = selector;
+      selector = this._defaultSelector;
+    }
+
+    namespace = this.of(pattern, selector);
+  }
+
+  namespace.getConnection(cb);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+var pool  = mysql.createPool({
+  host     : &#x27;example.org&#x27;,
+  user     : &#x27;bob&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+pool.<span class="docApiCodeKeywordSpan">getConnection</span>(function(err, connection) {
+  // connected! (unless &#x60;err&#x60; is set)
+});
+&#x60;&#x60;&#x60;
+
+When you are done with a connection, just call &#x60;connection.release()&#x60; and the
+connection will return to the pool, ready to be used again by someone else.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.PoolCluster.prototype.of" id="element.db-lite.PoolCluster.prototype.of">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>of
+            <span class="docApiSignatureSpan">(pattern,
+ selector)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">of = function (pattern,
+ selector) {
+  pattern = pattern || &#x27;*&#x27;;
+
+  selector = selector || this._defaultSelector;
+  selector = selector.toUpperCase();
+  if (typeof PoolSelector[selector] === &#x27;undefined&#x27;) {
+    selector = this._defaultSelector;
+  }
+
+  var key = pattern + selector;
+
+  if (typeof this._namespaces[key] === &#x27;undefined&#x27;) {
+    this._namespaces[key] = new PoolNamespace(this, pattern, selector);
+  }
+
+  return this._namespaces[key];
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+poolCluster.on(&#x27;remove&#x27;, function (nodeId) {
+  console.log(&#x27;REMOVED NODE : &#x27; + nodeId); // nodeId = SLAVE1 
+});
+
+poolCluster.getConnection(&#x27;SLAVE*&#x27;, &#x27;ORDER&#x27;, function (err, connection) {});
+
+// of namespace : of(pattern, selector)
+poolCluster.<span class="docApiCodeKeywordSpan">of</span>(&#x27;*&#x27;).getConnection(function (err, connection) {});
+
+var pool = poolCluster.of(&#x27;SLAVE*&#x27;, &#x27;RANDOM&#x27;);
+pool.getConnection(function (err, connection) {});
+pool.getConnection(function (err, connection) {});
+pool.query(function (err, result) {});
+
+// close all connections
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.PoolCluster.prototype.remove" id="element.db-lite.PoolCluster.prototype.remove">
+            function <span class="docApiSignatureSpan">db-lite.PoolCluster.prototype.</span>remove
+            <span class="docApiSignatureSpan">(pattern)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function remove(pattern) {
+  var foundNodeIds = this._findNodeIds(pattern, true);
+
+  for (var i = 0; i &lt; foundNodeIds.length; i++) {
+    var node = this._getNode(foundNodeIds[i]);
+
+    if (node) {
+      this._removeNode(node);
+    }
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+// add configurations (the config is a pool config object)
+poolCluster.add(config); // add configuration with automatic name
+poolCluster.add(&#x27;MASTER&#x27;, masterConfig); // add a named configuration
+poolCluster.add(&#x27;SLAVE1&#x27;, slave1Config);
+poolCluster.add(&#x27;SLAVE2&#x27;, slave2Config);
+
+// remove configurations
+poolCluster.<span class="docApiCodeKeywordSpan">remove</span>(&#x27;SLAVE2&#x27;); // By nodeId
+poolCluster.remove(&#x27;SLAVE*&#x27;); // By target group : SLAVE1-2
+
+// Target Group : ALL(anonymous, MASTER, SLAVE1-2), Selector : round-robin(default)
+poolCluster.getConnection(function (err, connection) {});
+
+// Target Group : MASTER, Selector : round-robin
+poolCluster.getConnection(&#x27;MASTER&#x27;, function (err, connection) {});
+...</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.db-lite.Query.prototype" id="module.db-lite.Query.prototype">module db-lite.Query.prototype</a></h1>
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.EofPacket" id="element.db-lite.Query.prototype.EofPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>EofPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">EofPacket = function (packet) {
+  this._resultSet.eofPackets.push(packet);
+
+  if (this._resultSet.eofPackets.length === 1 &amp;&amp; !this._callback) {
+    this.emit(&#x27;fields&#x27;, this._resultSet.fieldPackets, this._index);
+  }
+
+  if (this._resultSet.eofPackets.length !== 2) {
+    return;
+  }
+
+  if (this._callback) {
+    this._results.push(this._resultSet.rows);
+    this._fields.push(this._resultSet.fieldPackets);
+  }
+
+  this._index++;
+  this._resultSet = null;
+  this._handleFinalResultPacket(packet);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.ErrorPacket" id="element.db-lite.Query.prototype.ErrorPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>ErrorPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">ErrorPacket = function (packet) {
+  var err = this._packetToError(packet);
+
+  var results = (this._results.length &gt; 0)
+    ? this._results
+    : undefined;
+
+  var fields = (this._fields.length &gt; 0)
+    ? this._fields
+    : undefined;
+
+  err.index = this._index;
+  this.end(err, results, fields);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.FieldPacket" id="element.db-lite.Query.prototype.FieldPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>FieldPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">FieldPacket = function (packet) {
+  this._resultSet.fieldPackets.push(packet);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.OkPacket" id="element.db-lite.Query.prototype.OkPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>OkPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">OkPacket = function (packet) {
+  // try...finally for exception safety
+  try {
+    if (!this._callback) {
+      this.emit(&#x27;result&#x27;, packet, this._index);
+    } else {
+      this._results.push(packet);
+      this._fields.push(undefined);
+    }
+  } finally {
+    this._index++;
+    this._resultSet = null;
+    this._handleFinalResultPacket(packet);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.ResultSetHeaderPacket" id="element.db-lite.Query.prototype.ResultSetHeaderPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>ResultSetHeaderPacket
+            <span class="docApiSignatureSpan">(packet)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">ResultSetHeaderPacket = function (packet) {
+  this._resultSet = new ResultSet(packet);
+
+  // used by LOAD DATA LOCAL INFILE queries
+  if (packet.fieldCount === null) {
+    this._sendLocalDataFile(packet.extra);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.RowDataPacket" id="element.db-lite.Query.prototype.RowDataPacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>RowDataPacket
+            <span class="docApiSignatureSpan">(packet,
+ parser,
+ connection)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">RowDataPacket = function (packet,
+ parser,
+ connection) {
+  packet.parse(parser, this._resultSet.fieldPackets, this.typeCast, this.nestTables, connection);
+
+  if (this._callback) {
+    this._resultSet.rows.push(packet);
+  } else {
+    this.emit(&#x27;result&#x27;, packet, this._index);
+  }
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.determinePacket" id="element.db-lite.Query.prototype.determinePacket">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>determinePacket
+            <span class="docApiSignatureSpan">(firstByte,
+ parser)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">determinePacket = function (firstByte,
+ parser) {
+  if (firstByte === 0) {
+    // If we have a resultSet and got one eofPacket
+    if (this._resultSet &amp;&amp; this._resultSet.eofPackets.length === 1) {
+      // Then this is a RowDataPacket with an empty string in the first column.
+      // See: https://github.com/mysqljs/mysql/issues/222
+    } else if (this._resultSet &amp;&amp; this._resultSet.resultSetHeaderPacket
+           &amp;&amp; this._resultSet.resultSetHeaderPacket.fieldCount !== null) {
+      return Packets.FieldPacket;
+    } else {
+      return undefined;
+    }
+  }
+
+  if (firstByte === 255) {
+    return undefined;
+  }
+
+  // EofPacket&#x27;s are 5 bytes in mysql &gt;= 4.1
+  // This is the only / best way to differentiate their firstByte from a 9
+  // byte length coded binary.
+  if (firstByte === 0xfe &amp;&amp; parser.packetLength() &lt; 9) {
+    return Packets.EofPacket;
+  }
+
+  if (!this._resultSet) {
+    return Packets.ResultSetHeaderPacket;
+  }
+
+  return (this._resultSet.eofPackets.length === 0)
+    ? Packets.FieldPacket
+    : Packets.RowDataPacket;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.start" id="element.db-lite.Query.prototype.start">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>start
+            <span class="docApiSignatureSpan">()</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">start = function () {
+  this.emit(&#x27;packet&#x27;, new Packets.ComQueryPacket(this.sql));
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.db-lite.Query.prototype.stream" id="element.db-lite.Query.prototype.stream">
+            function <span class="docApiSignatureSpan">db-lite.Query.prototype.</span>stream
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">stream = function (options) {
+  var self = this,
+      stream;
+
+  options = options || {};
+  options.objectMode = true;
+  stream = new Readable(options);
+
+  stream._read = function() {
+    self._connection &amp;&amp; self._connection.resume();
+  };
+
+  stream.once(&#x27;end&#x27;, function() {
+    process.nextTick(function () {
+      stream.emit(&#x27;close&#x27;);
+    });
+  });
+
+  this.on(&#x27;result&#x27;,function(row,i) {
+    if (!stream.push(row)) self._connection.pause();
+    stream.emit(&#x27;result&#x27;,row,i);  // replicate old emitter
+  });
+
+  this.on(&#x27;error&#x27;,function(err) {
+    stream.emit(&#x27;error&#x27;,err);  // Pass on any errors
+  });
+
+  this.on(&#x27;end&#x27;, function() {
+    stream.push(null);  // pushing null, indicating EOF
+  });
+
+  this.on(&#x27;fields&#x27;,function(fields,i) {
+    stream.emit(&#x27;fields&#x27;,fields,i);  // replicate old emitter
+  });
+
+  return stream;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+Additionally you may be interested to know that it is currently not possible to
+stream individual row columns, they will always be buffered up entirely. If you
+have a good use case for streaming large fields to and from MySQL, I&#x27;d love to
+get your thoughts and contributions on this.
+
+### Piping results with Streams2
+
+The query object provides a convenience method &#x60;.<span class="docApiCodeKeywordSpan">stream</span>([options])&#x60; that wr\
+aps
+query events into a [Readable](http://nodejs.org/api/stream.html#stream_class_stream_readable)
+[Streams2](http://blog.nodejs.org/2012/12/20/streams2/) object. This
+stream can easily be piped downstream and provides automatic pause/resume,
+based on downstream congestion and the optional &#x60;highWaterMark&#x60;. The
+&#x60;objectMode&#x60; parameter of the stream is set to &#x60;true&#x60; and cannot be changed
+(if you need a byte stream, you will need to use a transform stream, like
+[objstream](https://www.npmjs.com/package/objstream) for example).
+...</pre></li>
+        </ul>
+        
+        
+    </div>
+    
+    <div class="docApiSectionDiv">
+    <h1><a href="#module.mysql-lite" id="module.mysql-lite">module mysql-lite</a></h1>
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Connection" id="element.mysql-lite.Connection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Connection
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Connection(options) {
+  Events.EventEmitter.call(this);
+
+  this.config = options.config;
+
+  this._socket        = options.socket;
+  this._protocol      = new Protocol({config: this.config, connection: this});
+  this._connectCalled = false;
+  this.state          = &#x27;disconnected&#x27;;
+  this.threadId       = null;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Pool" id="element.mysql-lite.Pool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Pool
+            <span class="docApiSignatureSpan">(options)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Pool(options) {
+  EventEmitter.call(this);
+  this.config = options.config;
+  this.config.connectionConfig.pool = this;
+
+  this._acquiringConnections = [];
+  this._allConnections       = [];
+  this._freeConnections      = [];
+  this._connectionQueue      = [];
+  this._closed               = false;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.PoolCluster" id="element.mysql-lite.PoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>PoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function PoolCluster(config) {
+  EventEmitter.call(this);
+
+  config = config || {};
+  this._canRetry = typeof config.canRetry === &#x27;undefined&#x27; ? true : config.canRetry;
+  this._defaultSelector = config.defaultSelector || &#x27;RR&#x27;;
+  this._removeNodeErrorCount = config.removeNodeErrorCount || 5;
+  this._restoreNodeTimeout = config.restoreNodeTimeout || 0;
+
+  this._closed = false;
+  this._findCaches = Object.create(null);
+  this._lastId = 0;
+  this._namespaces = Object.create(null);
+  this._nodes = Object.create(null);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.Query" id="element.mysql-lite.Query">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>Query
+            <span class="docApiSignatureSpan">(options,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function Query(options,
+ callback) {
+  Sequence.call(this, options, callback);
+
+  this.sql = options.sql;
+  this.values = options.values;
+  this.typeCast = (options.typeCast === undefined)
+    ? true
+    : options.typeCast;
+  this.nestTables = options.nestTables || false;
+
+  this._resultSet = null;
+  this._results   = [];
+  this._fields    = [];
+  this._index     = 0;
+  this._loadError = null;
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.createConnection" id="element.mysql-lite.createConnection">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createConnection
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function createConnection(config) {
+  var Connection       = loadClass(&#x27;Connection&#x27;);
+  var ConnectionConfig = loadClass(&#x27;ConnectionConfig&#x27;);
+
+  return new Connection({config: new ConnectionConfig(config)});
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+This is a node.js driver for mysql. It is written in JavaScript, does not
+require compiling, and is 100% MIT licensed.
+
+Here is an example on how to use it:
+
+&#x60;&#x60;&#x60;js
+var mysql      = require(&#x27;mysql&#x27;);
+var connection = mysql.<span class="docApiCodeKeywordSpan">createConnection</span>({
+  host     : &#x27;localhost&#x27;,
+  user     : &#x27;me&#x27;,
+  password : &#x27;secret&#x27;,
+  database : &#x27;my_db&#x27;
+});
+
+connection.connect();
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.createPool" id="element.mysql-lite.createPool">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createPool
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function createPool(config) {
+  var Pool       = loadClass(&#x27;Pool&#x27;);
+  var PoolConfig = loadClass(&#x27;PoolConfig&#x27;);
+
+  return new Pool({config: new PoolConfig(config)});
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+&#x60;&#x60;&#x60;
+
+Unlike &#x60;end()&#x60; the &#x60;destroy()&#x60; method does not take a callback argument.
+
+## Pooling connections
+
+Rather than creating and managing connections one-by-one, this module also
+provides built-in connection pooling using &#x60;mysql.<span class="docApiCodeKeywordSpan">createPool</span>(config)&#x60;.
+[Read more about connection pooling](https://en.wikipedia.org/wiki/Connection_pool).
+
+Use pool directly.
+&#x60;&#x60;&#x60;js
+var mysql = require(&#x27;mysql&#x27;);
+var pool  = mysql.createPool({
+connectionLimit : 10,
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.createPoolCluster" id="element.mysql-lite.createPoolCluster">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createPoolCluster
+            <span class="docApiSignatureSpan">(config)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function createPoolCluster(config) {
+  var PoolCluster = loadClass(&#x27;PoolCluster&#x27;);
+
+  return new PoolCluster(config);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+## PoolCluster
+
+PoolCluster provides multiple hosts connection. (group &amp; retry &amp; selector)
+
+&#x60;&#x60;&#x60;js
+// create
+var poolCluster = mysql.<span class="docApiCodeKeywordSpan">createPoolCluster</span>();
+
+// add configurations (the config is a pool config object)
+poolCluster.add(config); // add configuration with automatic name
+poolCluster.add(&#x27;MASTER&#x27;, masterConfig); // add a named configuration
+poolCluster.add(&#x27;SLAVE1&#x27;, slave1Config);
+poolCluster.add(&#x27;SLAVE2&#x27;, slave2Config);
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.createQuery" id="element.mysql-lite.createQuery">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>createQuery
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ callback)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function createQuery(sql,
+ values,
+ callback) {
+  var Connection = loadClass(&#x27;Connection&#x27;);
+
+  return Connection.createQuery(sql, values, callback);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+(function () {
+    &#x27;use strict&#x27;;
+    var local;
+    local = require(&#x27;mysql&#x27;);
+    local.Connection = local.createConnection({}).constructor;
+    local.Pool = local.createPool({}).constructor;
+    local.PoolCluster = local.createPoolCluster({}).constructor;
+    local.Query = local.<span class="docApiCodeKeywordSpan">createQuery</span>({}).constructor;
+    module.exports = local;
+}());
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.escape" id="element.mysql-lite.escape">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>escape
+            <span class="docApiSignatureSpan">(value,
+ stringifyObjects,
+ timeZone)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function escape(value,
+ stringifyObjects,
+ timeZone) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.escape(value, stringifyObjects, timeZone);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+);
+&#x60;&#x60;&#x60;
+
+## Escaping query values
+
+In order to avoid SQL Injection attacks, you should always escape any user
+provided data before using it inside a SQL query. You can do so using the
+&#x60;mysql.<span class="docApiCodeKeywordSpan">escape</span>()&#x60;, &#x60;connection.escape()&#x60; or &#x60;pool.escape()&#x\
+60; methods:
+
+&#x60;&#x60;&#x60;js
+var userId = &#x27;some user provided value&#x27;;
+var sql    = &#x27;SELECT * FROM users WHERE id = &#x27; + connection.escape(userId);
+connection.query(sql, function(err, results) {
+  // ...
+});
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.escapeId" id="element.mysql-lite.escapeId">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>escapeId
+            <span class="docApiSignatureSpan">(value,
+ forbidQualified)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function escapeId(value,
+ forbidQualified) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.escapeId(value, forbidQualified);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+
+console.log(query); // SELECT * FROM posts WHERE title=&#x27;Hello MySQL&#x27;
+&#x60;&#x60;&#x60;
+
+## Escaping query identifiers
+
+If you can&#x27;t trust an SQL identifier (database / table / column name) because it is
+provided by a user, you should escape it with &#x60;mysql.<span class="docApiCodeKeywordSpan">escapeId</span>(identifier)&#x60;,
+&#x60;connection.escapeId(identifier)&#x60; or &#x60;pool.escapeId(identifier)&#x60; like this:
+
+&#x60;&#x60;&#x60;js
+var sorter = &#x27;date&#x27;;
+var sql    = &#x27;SELECT * FROM posts ORDER BY &#x27; + connection.escapeId(sorter);
+connection.query(sql, function(err, results) {
+// ...
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.format" id="element.mysql-lite.format">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>format
+            <span class="docApiSignatureSpan">(sql,
+ values,
+ stringifyObjects,
+ timeZone)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">function format(sql,
+ values,
+ stringifyObjects,
+ timeZone) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.format(sql, values, stringifyObjects, timeZone);
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">...
+### Preparing Queries
+
+You can use mysql.format to prepare a query with multiple insertion points, utilizing the proper escaping for ids and values. A \
+simple example of this follows:
+
+&#x60;&#x60;&#x60;js
+var sql = &quot;SELECT * FROM ?? WHERE ?? = ?&quot;;
+var inserts = [&#x27;users&#x27;, &#x27;id&#x27;, userId];
+sql = mysql.<span class="docApiCodeKeywordSpan">format</span>(sql, inserts);
+&#x60;&#x60;&#x60;
+
+Following this you then have a valid, escaped query that you can then send to the database safely. This is useful if you are loo\
+king to prepare the query before actually sending it to the database. As mysql.format is exposed from SqlString.format you also \
+have the option (but are not required) to pass in stringifyObject and timezone, allowing you provide a custom means of turning o\
+bjects into strings, as well as a location-specific/timezone-aware Date.
+
+### Custom format
+
+If you prefer to have another type of query escape format, there&#x27;s a connection configuration option you can use to define \
+a custom format function. You can access the connection object if you want to use the built-in &#x60;.escape()&#x60; or any othe\
+r connection function.
+...</pre></li>
+        </ul>
+        
+        
+        
+        <h2>
+            <a href="#element.mysql-lite.middleware" id="element.mysql-lite.middleware">
+            function <span class="docApiSignatureSpan">mysql-lite.</span>middleware
+            <span class="docApiSignatureSpan">(request,
+ response,
+ nextMiddleware)</span>
+            </a>
+        </h2>
+        <ul>
+        <li>description and source code<pre class="docApiCodePre">middleware = function (request,
+ response,
+ nextMiddleware) {
+    var options;
+    options = {};
+    local.onNext(options, function (error) {
+        // recurse with next middleware in middlewareList
+        if (options.modeNext &lt; self.middlewareList.length) {
+            // run the sub-middleware
+            self.middlewareList[options.modeNext](
+                request,
+                response,
+                options.onNext
+            );
+            return;
+        }
+        // default to nextMiddleware
+        nextMiddleware(error);
+    });
+    options.modeNext = -1;
+    options.onNext();
+}</pre></li>
+        <li>example usage<pre class="docApiCodePre">n/a</pre></li>
+        </ul>
+        
+        
+        
+        
+        
+        
+    </div>
+    
+</div>
