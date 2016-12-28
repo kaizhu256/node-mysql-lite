@@ -1,81 +1,83 @@
-<svg height="1246" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="1246" fill="#555" width="720"></rect>
+<svg height="1278" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="1278" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26"></tspan>
 <tspan x="10" y="42">&gt; mysql-lite@2016.11.2 test /home/travis/build/kaizhu256/node-mysql-lite</tspan>
 <tspan x="10" y="58">&gt; export PORT=$(utility2 shServerPortRandom) &amp;&amp; utility2 test test.js</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2016-12-14T03:53:05Z - npm-testing /home/travis/build/kaizhu256/node-mysq\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2016-12-28T14:41:03Z - npm-testing /home/travis/build/kaizhu256/node-mysq\</tspan>
 <tspan x="10" y="122">l-lite</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
-<tspan x="10" y="170">covering $ /home/travis/.nvm/versions/node/v7.2.1/bin/node /home/travis/build/kaizhu256/node-mys\</tspan>
+<tspan x="10" y="170">covering $ /home/travis/.nvm/versions/node/v7.3.0/bin/node /home/travis/build/kaizhu256/node-mys\</tspan>
 <tspan x="10" y="186">ql-lite/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
 <tspan x="10" y="218">eport</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 38081</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 50447</tspan>
 <tspan x="10" y="250">created documentation file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="266"></tspan>
 <tspan x="10" y="282"></tspan>
 <tspan x="10" y="298">browserTest - created electron entry-page /home/travis/build/kaizhu256/node-mysql-lite/tmp/elect\</tspan>
-<tspan x="10" y="314">ron.158fb76560b0.539d3a6624554.html</tspan>
+<tspan x="10" y="314">ron.15945e097620.1c53306151d09.html</tspan>
 <tspan x="10" y="330"></tspan>
-<tspan x="10" y="346">[2393:1214/035306:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
+<tspan x="10" y="346">[2485:1228/144103:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
 <tspan x="10" y="362">/chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more\</tspan>
 <tspan x="10" y="378"> information on developing with the sandbox on.</tspan>
 <tspan x="10" y="394">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="410">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
 <tspan x="10" y="426">eport</tspan>
-<tspan x="10" y="442">[2393:1214/035306:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
-<tspan x="10" y="458">var/run/dbus/system_bus_socket: Connection refused</tspan>
+<tspan x="10" y="442">[2485:1228/144104:WARNING:host_discardable_shared_memory_manager.cc(132)] Less than 64MB of free\</tspan>
+<tspan x="10" y="458"> space in temporary directory for shared memory files: 59</tspan>
 <tspan x="10" y="474">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="490">[2393:1214/035306:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="506">[2393:1214/035306:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="522">[2413:1214/035306:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
-<tspan x="10" y="538">in process gpu-process. </tspan>
-<tspan x="10" y="554">[2393:1214/035306:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="570"></tspan>
-<tspan x="10" y="586">browserTest - opened url file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.api.h\</tspan>
-<tspan x="10" y="602">tml</tspan>
-<tspan x="10" y="618"></tspan>
-<tspan x="10" y="634"></tspan>
-<tspan x="10" y="650">browserTest - created screen-capture file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/bui\</tspan>
-<tspan x="10" y="666">ld/screen-capture.npmTest.browser._2Fhome_2Ftravis_2Fbuild_2Fkaizhu256_2Fnode-mysql-lite_2Ftmp_2\</tspan>
-<tspan x="10" y="682">Fbuild_2Fdoc.api.html.png</tspan>
-<tspan x="10" y="698"></tspan>
-<tspan x="10" y="714"></tspan>
-<tspan x="10" y="730">browserTest - exit-code 0 - file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.ap\</tspan>
-<tspan x="10" y="746">i.html</tspan>
-<tspan x="10" y="762"></tspan>
-<tspan x="10" y="778">[node test-case 1 of 1 passed] - testCase_build_doc</tspan>
-<tspan x="10" y="794">--------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="810">File                |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
+<tspan x="10" y="490">[2485:1228/144104:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
+<tspan x="10" y="506">var/run/dbus/system_bus_socket: Connection refused</tspan>
+<tspan x="10" y="522">[2485:1228/144104:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="538">[2485:1228/144104:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="554">[2505:1228/144104:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="570">in process gpu-process. </tspan>
+<tspan x="10" y="586">[2485:1228/144104:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="602"></tspan>
+<tspan x="10" y="618">browserTest - opened url file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.api.h\</tspan>
+<tspan x="10" y="634">tml</tspan>
+<tspan x="10" y="650"></tspan>
+<tspan x="10" y="666"></tspan>
+<tspan x="10" y="682">browserTest - created screen-capture file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/bui\</tspan>
+<tspan x="10" y="698">ld/screen-capture.npmTest.browser._2Fhome_2Ftravis_2Fbuild_2Fkaizhu256_2Fnode-mysql-lite_2Ftmp_2\</tspan>
+<tspan x="10" y="714">Fbuild_2Fdoc.api.html.png</tspan>
+<tspan x="10" y="730"></tspan>
+<tspan x="10" y="746"></tspan>
+<tspan x="10" y="762">browserTest - exit-code 0 - file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.ap\</tspan>
+<tspan x="10" y="778">i.html</tspan>
+<tspan x="10" y="794"></tspan>
+<tspan x="10" y="810">[node test-case 1 of 1 passed] - testCase_build_doc</tspan>
 <tspan x="10" y="826">--------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="842">   node-mysql-lite/ |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="858">      lib.mysql.js  |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="874">      test.js       |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="890">--------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="906">All files           |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="842">File                |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
+<tspan x="10" y="858">--------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="874">   node-mysql-lite/ |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="890">      lib.mysql.js  |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="906">      test.js       |       100 |       100 |       100 |       100 |</tspan>
 <tspan x="10" y="922">--------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="938"></tspan>
-<tspan x="10" y="954">created coverage file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/coverage.html/ind\</tspan>
-<tspan x="10" y="970">ex.html</tspan>
-<tspan x="10" y="986">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
-<tspan x="10" y="1002">eport</tspan>
-<tspan x="10" y="1018"></tspan>
-<tspan x="10" y="1034">-------------------------------------------------------</tspan>
-<tspan x="10" y="1050">| test-report - npmTest - node - linux v7.2.1 - 2016-12-14T03:53:05.819Z</tspan>
-<tspan x="10" y="1066">|    6342 ms            0 failed        1 passed      |</tspan>
-<tspan x="10" y="1082">-------------------------------------------------------</tspan>
-<tspan x="10" y="1098">| test-report - npmTestPublished - node - linux v7.2.1 - 2016-12-14T03:52:57.194Z</tspan>
-<tspan x="10" y="1114">|    6269 ms            0 failed        1 passed      |</tspan>
-<tspan x="10" y="1130">-------------------------------------------------------</tspan>
-<tspan x="10" y="1146"></tspan>
-<tspan x="10" y="1162">created test-report file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.ht\</tspan>
-<tspan x="10" y="1178">ml</tspan>
-<tspan x="10" y="1194"></tspan>
-<tspan x="10" y="1210"></tspan>
-<tspan x="10" y="1226">npmTest - 0 failed tests</tspan>
+<tspan x="10" y="938">All files           |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="954">--------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="970"></tspan>
+<tspan x="10" y="986">created coverage file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/coverage.html/ind\</tspan>
+<tspan x="10" y="1002">ex.html</tspan>
+<tspan x="10" y="1018">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
+<tspan x="10" y="1034">eport</tspan>
+<tspan x="10" y="1050"></tspan>
+<tspan x="10" y="1066">-------------------------------------------------------</tspan>
+<tspan x="10" y="1082">| test-report - npmTest - node - linux v7.3.0 - 2016-12-28T14:41:03.252Z</tspan>
+<tspan x="10" y="1098">|    6446 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1114">-------------------------------------------------------</tspan>
+<tspan x="10" y="1130">| test-report - npmTestPublished - node - linux v7.3.0 - 2016-12-28T14:40:51.498Z</tspan>
+<tspan x="10" y="1146">|    9176 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1162">-------------------------------------------------------</tspan>
+<tspan x="10" y="1178"></tspan>
+<tspan x="10" y="1194">created test-report file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.ht\</tspan>
+<tspan x="10" y="1210">ml</tspan>
+<tspan x="10" y="1226"></tspan>
+<tspan x="10" y="1242"></tspan>
+<tspan x="10" y="1258">npmTest - 0 failed tests</tspan>
 </text>
 </svg>
