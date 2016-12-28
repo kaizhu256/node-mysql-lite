@@ -6,7 +6,7 @@
 <tspan x="10" y="58">&gt; export PORT=$(utility2 shServerPortRandom) &amp;&amp; utility2 test test.js</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2016-12-28T20:01:03Z - npm-testing /home/travis/build/kaizhu256/node-mysq\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2016-12-28T20:08:32Z - npm-testing /home/travis/build/kaizhu256/node-mysq\</tspan>
 <tspan x="10" y="122">l-lite</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
@@ -14,27 +14,27 @@
 <tspan x="10" y="186">ql-lite/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
 <tspan x="10" y="218">eport</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 57475</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 42567</tspan>
 <tspan x="10" y="250">created documentation file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="266"></tspan>
 <tspan x="10" y="282"></tspan>
 <tspan x="10" y="298">browserTest - created electron entry-page /home/travis/build/kaizhu256/node-mysql-lite/tmp/elect\</tspan>
-<tspan x="10" y="314">ron.1594705903c0.fc7d48cda50ab.html</tspan>
+<tspan x="10" y="314">ron.159470c6b470.8a6af8398a436.html</tspan>
 <tspan x="10" y="330"></tspan>
-<tspan x="10" y="346">[2409:1228/200104:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
+<tspan x="10" y="346">[2408:1228/200833:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
 <tspan x="10" y="362">/chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more\</tspan>
 <tspan x="10" y="378"> information on developing with the sandbox on.</tspan>
 <tspan x="10" y="394">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="410">merging file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.json to test-r\</tspan>
 <tspan x="10" y="426">eport</tspan>
-<tspan x="10" y="442">[2409:1228/200104:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
+<tspan x="10" y="442">[2408:1228/200833:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
 <tspan x="10" y="458">var/run/dbus/system_bus_socket: Connection refused</tspan>
 <tspan x="10" y="474">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="490">[2409:1228/200104:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="506">[2409:1228/200104:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="522">[2438:1228/200105:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="490">[2408:1228/200834:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="506">[2408:1228/200834:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="522">[2428:1228/200834:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="538">in process gpu-process. </tspan>
-<tspan x="10" y="554">[2409:1228/200105:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="554">[2408:1228/200834:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
 <tspan x="10" y="570"></tspan>
 <tspan x="10" y="586">browserTest - opened url file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/doc.api.h\</tspan>
 <tspan x="10" y="602">tml</tspan>
@@ -65,11 +65,11 @@
 <tspan x="10" y="1002">eport</tspan>
 <tspan x="10" y="1018"></tspan>
 <tspan x="10" y="1034">-------------------------------------------------------</tspan>
-<tspan x="10" y="1050">| test-report - npmTest - node - linux v7.3.0 - 2016-12-28T20:01:03.551Z</tspan>
-<tspan x="10" y="1066">|    6658 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1050">| test-report - npmTest - node - linux v7.3.0 - 2016-12-28T20:08:32.857Z</tspan>
+<tspan x="10" y="1066">|    6359 ms            0 failed        1 passed      |</tspan>
 <tspan x="10" y="1082">-------------------------------------------------------</tspan>
-<tspan x="10" y="1098">| test-report - npmTestPublished - node - linux v7.3.0 - 2016-12-28T20:00:54.349Z</tspan>
-<tspan x="10" y="1114">|    6502 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1098">| test-report - npmTestPublished - node - linux v7.3.0 - 2016-12-28T20:08:24.008Z</tspan>
+<tspan x="10" y="1114">|    6351 ms            0 failed        1 passed      |</tspan>
 <tspan x="10" y="1130">-------------------------------------------------------</tspan>
 <tspan x="10" y="1146"></tspan>
 <tspan x="10" y="1162">created test-report file:///home/travis/build/kaizhu256/node-mysql-lite/tmp/build/test-report.ht\</tspan>
