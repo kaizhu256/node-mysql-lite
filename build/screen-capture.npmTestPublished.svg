@@ -2,7 +2,7 @@
 <rect height="1550" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26"></tspan>
-<tspan x="10" y="42">[MODE_BUILD=npmTestPublished] - 2016-12-28T19:59:23Z - npm-testing published-package mysql-lite</tspan>
+<tspan x="10" y="42">[MODE_BUILD=npmTestPublished] - 2016-12-28T20:00:49Z - npm-testing published-package mysql-lite</tspan>
 <tspan x="10" y="58"></tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90">&gt; mysql-lite@2016.11.2 postinstall /tmp/app/node_modules/mysql-lite</tspan>
@@ -38,31 +38,31 @@
 <tspan x="10" y="570">&gt; export PORT=$(utility2 shServerPortRandom) &amp;&amp; utility2 test test.js</tspan>
 <tspan x="10" y="586"></tspan>
 <tspan x="10" y="602"></tspan>
-<tspan x="10" y="618">[MODE_BUILD=npmTestPublished] - 2016-12-28T19:59:27Z - npm-testing /tmp/app/node_modules/mysql-l\</tspan>
+<tspan x="10" y="618">[MODE_BUILD=npmTestPublished] - 2016-12-28T20:00:54Z - npm-testing /tmp/app/node_modules/mysql-l\</tspan>
 <tspan x="10" y="634">ite</tspan>
 <tspan x="10" y="650"></tspan>
 <tspan x="10" y="666"></tspan>
 <tspan x="10" y="682">covering $ /home/travis/.nvm/versions/node/v7.3.0/bin/node /tmp/app/node_modules/mysql-lite/test\</tspan>
 <tspan x="10" y="698">.js</tspan>
-<tspan x="10" y="714">&gt; server listening on http-port 55347</tspan>
+<tspan x="10" y="714">&gt; server listening on http-port 63853</tspan>
 <tspan x="10" y="730">created documentation file:///tmp/app/node_modules/mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="746"></tspan>
 <tspan x="10" y="762"></tspan>
-<tspan x="10" y="778">browserTest - created electron entry-page /tmp/app/node_modules/mysql-lite/tmp/electron.15947041\</tspan>
-<tspan x="10" y="794">b3d0.ade91f439da1f.html</tspan>
+<tspan x="10" y="778">browserTest - created electron entry-page /tmp/app/node_modules/mysql-lite/tmp/electron.15947056\</tspan>
+<tspan x="10" y="794">c770.5b90ddae117fb.html</tspan>
 <tspan x="10" y="810"></tspan>
-<tspan x="10" y="826">[2254:1228/195928:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
+<tspan x="10" y="826">[2246:1228/200054:ERROR:browser_main_loop.cc(231)] Running without the SUID sandbox! See https:/\</tspan>
 <tspan x="10" y="842">/chromium.googlesource.com/chromium/src/+/master/docs/linux_suid_sandbox_development.md for more\</tspan>
 <tspan x="10" y="858"> information on developing with the sandbox on.</tspan>
 <tspan x="10" y="874">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="890">[2254:1228/195929:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
-<tspan x="10" y="906">var/run/dbus/system_bus_socket: Connection refused</tspan>
-<tspan x="10" y="922">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="938">[2254:1228/195929:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="954">[2254:1228/195929:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="970">[2274:1228/195929:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="890">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+<tspan x="10" y="906">[2246:1228/200055:ERROR:bus.cc(432)] Failed to connect to the bus: Failed to connect to socket /\</tspan>
+<tspan x="10" y="922">var/run/dbus/system_bus_socket: Connection refused</tspan>
+<tspan x="10" y="938">[2246:1228/200055:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="954">[2246:1228/200055:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="970">[2265:1228/200055:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="986">in process gpu-process. </tspan>
-<tspan x="10" y="1002">[2254:1228/195929:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="1002">[2246:1228/200055:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
 <tspan x="10" y="1018"></tspan>
 <tspan x="10" y="1034">browserTest - opened url file:///tmp/app/node_modules/mysql-lite/tmp/build/doc.api.html</tspan>
 <tspan x="10" y="1050"></tspan>
@@ -88,8 +88,8 @@
 <tspan x="10" y="1370">created coverage file:///tmp/app/node_modules/mysql-lite/tmp/build/coverage.html/index.html</tspan>
 <tspan x="10" y="1386"></tspan>
 <tspan x="10" y="1402">-------------------------------------------------------</tspan>
-<tspan x="10" y="1418">| test-report - npmTestPublished - node - linux v7.3.0 - 2016-12-28T19:59:28.048Z</tspan>
-<tspan x="10" y="1434">|    6409 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1418">| test-report - npmTestPublished - node - linux v7.3.0 - 2016-12-28T20:00:54.349Z</tspan>
+<tspan x="10" y="1434">|    6502 ms            0 failed        1 passed      |</tspan>
 <tspan x="10" y="1450">-------------------------------------------------------</tspan>
 <tspan x="10" y="1466"></tspan>
 <tspan x="10" y="1482">created test-report file:///tmp/app/node_modules/mysql-lite/tmp/build/test-report.html</tspan>
