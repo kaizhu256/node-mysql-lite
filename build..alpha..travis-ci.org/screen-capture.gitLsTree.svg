@@ -1,7 +1,7 @@
 <svg height="1918" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="1918" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  1.  2016-12-01 21:45:55 +0800       87 byte  .gitignore</tspan>
+<tspan x="10" y="26">  1.  2016-12-29 16:51:16 +0800       94 byte  .gitignore</tspan>
 <tspan x="10" y="42">  2.  2016-12-01 21:45:55 +0800     7451 byte  .travis.yml</tspan>
 <tspan x="10" y="58">  3.  2016-12-29 04:06:48 +0800    55297 byte  README.md</tspan>
 <tspan x="10" y="74">  4.  2016-12-01 21:45:55 +0800       24 byte  bignumber.js/.npmignore</tspan>
