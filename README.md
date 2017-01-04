@@ -2,7 +2,7 @@ mysql-lite
 ==========
 this package is a zero-dependency version of the mysql v2.12.0 npm-package
 
-[![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-mysql-lite.svg)](https://travis-ci.org/kaizhu256/node-mysql-lite) [![mysql coverage](https://kaizhu256.github.io/node-mysql-lite/build..alpha..travis-ci.org/coverage.badge.svg)](https://kaizhu256.github.io/node-mysql-lite/build..alpha..travis-ci.org/coverage.html/index.html)
+[![travis-ci.org build-status](https://api.travis-ci.org/kaizhu256/node-mysql-lite.svg)](https://travis-ci.org/kaizhu256/node-mysql-lite)
 
 [![NPM](https://nodei.co/npm/mysql-lite.png?downloads=true)](https://www.npmjs.com/package/mysql-lite)
 

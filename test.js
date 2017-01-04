@@ -51,14 +51,7 @@
          */
             options = {};
             options.readmeInit = function (options) {
-                // search-and-replace readmeTemplate
-                [
-                    (/\n# quickstart[\S\s]*?\n# package.json\n/)
-                ].forEach(function (rgx) {
-                    options.readmeFile.replace(rgx, function (match0) {
-                        options.readmeTemplate = options.readmeTemplate.replace(rgx, match0);
-                    });
-                });
+                options.readmeTemplate = options.readmeFile;
             };
             local.buildReadmeJslintLite(options, onError);
         };
