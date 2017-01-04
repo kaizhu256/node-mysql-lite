@@ -58,9 +58,8 @@ this package is a zero-dependency version of the mysql v2.12.0 npm-package
 # package.json
 ```json
 {
-    "package.json": true,
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "{{packageJson.description}}",
+    "description": "this package is a zero-dependency version of the mysql v2.12.0 npm-package",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
@@ -80,16 +79,16 @@ this package is a zero-dependency version of the mysql v2.12.0 npm-package
     },
     "scripts": {
         "build-ci": "utility2 shRun shReadmeBuild",
-        "postinstall": "\
-for DIR in .bin electron-lite utility2; \
-do \
-    (if [ -d node_modules/$DIR ] && [ ! -d $DIR ]; then mv node_modules/$DIR .; fi); \
-done; \
-rm -fr node_modules && ln -s . node_modules",
-        "start": "\
-export PORT=${PORT:-8080} && \
-export npm_config_mode_auto_restart=1 && \
-utility2 shRun shIstanbulCover test.js",
+        "postinstall": "for DIR in .bin electron-lite utility2; do     (if [ -d node_modules/$DIR ] && [ ! -d $DIR ]; then mv node_modules/$DIR .; fi); done; rm -fr node_modules && ln -s . node_modules",
+
+
+
+
+
+        "start": "export PORT=${PORT:-8080} && export npm_config_mode_auto_restart=1 && utility2 shRun shIstanbulCover test.js",
+
+
+
         "test": "export PORT=$(utility2 shServerPortRandom) && utility2 test test.js"
     },
     "version": "2016.12.28"

@@ -17,8 +17,6 @@
 
     // run shared js-env code - pre-init
     (function () {
-        // init Error.stackTraceLimit
-        Error.stackTraceLimit = 20;
         // init local
         local = {};
         // init modeJs
@@ -45,6 +43,24 @@
          */
             options = {};
             local.buildDoc(options, onError);
+        };
+
+        local.testCase_build_readme = function (options, onError) {
+        /*
+         * this function will test build's readme handling-behavior
+         */
+            options = {};
+            options.readmeInit = function (options) {
+                // search-and-replace readmeTemplate
+                [
+                    (/\n# quickstart[\S\s]*?\n# package.json\n/)
+                ].forEach(function (rgx) {
+                    options.readmeFile.replace(rgx, function (match0) {
+                        options.readmeTemplate = options.readmeTemplate.replace(rgx, match0);
+                    });
+                });
+            };
+            local.buildReadmeJslintLite(options, onError);
         };
         break;
     }
