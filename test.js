@@ -55,7 +55,7 @@
                 [
                     (/ \[!\[istanbul coverage\].*?(\n)/),
                     (/\n# cdn download\n[\S\s]*(\n# documentation\n)/),
-                    (/^\| test-server-. : \|.*?\n()/gm),
+                    (/\n\| test-server-. : \|[\S\s]*?(\n\| build-artifacts : \|)/),
                     (/\n# quickstart\b[\S\s]*?(\n# package.json\n)/)
                 ].forEach(function (rgx) {
                     options.readmeTemplate = options.readmeTemplate.replace(rgx, '$1');
