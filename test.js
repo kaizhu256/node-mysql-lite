@@ -51,7 +51,15 @@
          */
             options = {};
             options.readmeInit = function (options) {
-                options.readmeTemplate = options.readmeFile;
+                // search-and-replace readmeTemplate
+                [
+                    (/ \[!\[istanbul coverage\].*?(\n)/),
+                    (/\n# cdn download\n[\S\s]*(\n# documentation\n)/),
+                    (/^\| test-server-. : \|.*?\n()/gm),
+                    (/\n# quickstart\b[\S\s]*?(\n# package.json\n)/)
+                ].forEach(function (rgx) {
+                    options.readmeTemplate = options.readmeTemplate.replace(rgx, '$1');
+                });
             };
             local.buildReadmeJslintLite(options, onError);
         };
