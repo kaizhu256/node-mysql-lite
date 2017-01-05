@@ -50,17 +50,17 @@
          * this function will test build's readme handling-behavior
          */
             options = {};
-            options.readmeInit = function (options) {
-                // search-and-replace readmeTemplate
-                [
-                    (/ \[!\[istanbul coverage\].*?(\n)/),
-                    (/\n# cdn download\n[\S\s]*(\n# documentation\n)/),
-                    (/\n\| test-server-. : \|[\S\s]*?(\n\| build-artifacts : \|)/),
-                    (/\n# quickstart\b[\S\s]*?(\n# package.json\n)/)
-                ].forEach(function (rgx) {
-                    options.readmeTemplate = options.readmeTemplate.replace(rgx, '$1');
-                });
-            };
+            options.readmeFile = local.fs.readFileSync('README.md', 'utf8');
+            options.readmeTemplate = local.templateReadme;
+            // search-and-replace readmeTemplate
+            [
+                (/ \[!\[istanbul coverage\].*?(\n)/),
+                (/\n# cdn download\n[\S\s]*(\n# documentation\n)/),
+                (/\n\| test-server-. : \|[\S\s]*?(\n\| build-artifacts : \|)/),
+                (/\n# quickstart\b[\S\s]*?(\n# package.json\n)/)
+            ].forEach(function (rgx) {
+                options.readmeTemplate = options.readmeTemplate.replace(rgx, '$1');
+            });
             local.buildReadmeJslintLite(options, onError);
         };
         break;
